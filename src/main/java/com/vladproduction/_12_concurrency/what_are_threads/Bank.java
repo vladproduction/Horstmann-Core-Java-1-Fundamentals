@@ -1,4 +1,4 @@
-package com.vladproduction._12_concurrency.whatarethreads;
+package com.vladproduction._12_concurrency.what_are_threads;
 
 import java.util.Arrays;
 
