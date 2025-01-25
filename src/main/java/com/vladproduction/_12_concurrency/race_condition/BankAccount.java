@@ -1,12 +1,12 @@
-package com.vladproduction._12_concurrency.what_are_threads;
+package com.vladproduction._12_concurrency.race_condition;
 
 import java.util.Arrays;
 
-public class Bank {
+public class BankAccount {
 
     private final double[] accounts;
 
-    public Bank(int n, double initialBalance){
+    public BankAccount(int n, double initialBalance){
         accounts = new double[n];
         Arrays.fill(accounts, initialBalance);
     }

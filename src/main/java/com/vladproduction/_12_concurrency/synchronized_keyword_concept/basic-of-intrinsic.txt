@@ -1,0 +1,31 @@
+* Every object in Java has an intrinsic lock
+
+* If a method is declared
+  with the synchronized keyword, the object’s lock protects the entire method.
+  That is, to call the method, a thread must acquire the intrinsic object lock.
+
+* In other words:
+
+  public synchronized void methodAAA() {
+        method body
+  }
+
+  is the equivalent of:
+
+  public void methodAAA() {
+   this.intrinsicLock.lock();
+   try {
+        method body
+   } finally {
+        this.intrinsicLock.unlock(); }
+   }
+
+* we can simply declare the transfer() method of the Bank class as synchronized
+
+* each object has an intrinsic lock, and that the lock has an intrinsic condition
+
+* The lock manages the threads that try to enter a synchronized method. The condition
+  manages the threads that have called wait.
+
+* It is also legal to declare static methods as synchronized. If such a method is
+  called, it acquires the intrinsic lock of the associated class object.

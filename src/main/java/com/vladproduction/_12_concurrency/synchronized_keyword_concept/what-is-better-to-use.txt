@@ -1,0 +1,16 @@
+What should you use in your code
+Lock and Condition objects or synchronized methods? Here is our recommendation:
+
+• It is best to use neither Lock/Condition nor the synchronized keyword. In many
+situations, you can use one of the mechanisms of the java.util.concurrent
+package that do all the locking for you. For example, in Section 12.5.1,
+“Blocking Queues,” on p. 781, you will see how to use a blocking queue
+to synchronize threads that work on a common task. You should also
+explore parallel streams—see Chapter 1 of Volume II.
+
+• If the synchronized keyword works for your situation, by all means, use it.
+You’ll write less code and have less room for error. Listing 12.5 shows
+the bank example, implemented with synchronized methods.
+
+• Use Lock/Condition if you really need the additional power that these
+constructs give you.
